@@ -204,7 +204,7 @@ button:active {
     display:block;
     position: absolute;
     left: 0%;
-    top: 38%;
+    top: 68%;
     width: 250px;
     padding: 0px;
       }
@@ -213,15 +213,15 @@ button:active {
     display: block;
     position: absolute;
     left: 0%;
-    top: 25%;
+    top: 45%;
     width: 250px;
     height: 250px;
   }
   .imagen1 {
 
     position: absolute;
-    left: 10%;
-    top: 28%;
+    left: 20%;
+    top: 48%;
   
     z-index: 1;
     width: 100px;
@@ -233,7 +233,7 @@ button:active {
     margin-left: 5px;
     position: absolute;
     left: 0%;
-    top: 48%;
+    top: 88%;
     z-index: 3;
   
 
