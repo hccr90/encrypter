@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <script src="funcion.js"></script>
+    <title>encriptador</title>
+  </head>
+  <body>
+    <main>
+      <div class="mitad">
+        <img src="images/Logo.png" alt="" class="logo" />
+        <br />
+        <textarea
+          class="rectangulo2"
+          id="message"
+          name="message"
+          rows="4"
+          cols="50"
+          placeholder="Ingrese el texto aqui"
+        ></textarea>
+
+        <br />
+        <div class="advertencia">
+          <img src="images/Vector.png" alt="!" style="display: inline-block" />
+          <h1 style="display: inline-block">
+            Solo letras minúsculas y sin acento
+          </h1>
+        </div>
+        <br />
+        <div class="dosBotones">
+          <button class="mi-boton-1" id="encriptar" onclick="encriptar()">
+            encriptar
+          </button>
+          <button class="mi-boton-2" id="desencriptar" onclick="desencriptar()">
+            desencriptar
+          </button>
+        </div>
+      </div>
+      <div class="mitad2">
+        <img
+          src="images/Muneco.png"
+          class="imagen1"
+          alt="Imagen 1"
+          id="imagenM"
+        />
+        <div id="textoCuadro" class="textoCdr">
+          <h1>Ningún mensaje fue encontrado</h1>
+          <br />
+          <h2>Ingrese el texto que desea encriptar o desencriptar</h2>
+        </div>
+
+        <textarea
+          class="rectangulo"
+          id="resultado"
+          name="message"
+          rows="4"
+          cols="50"
+          
+        ></textarea>
+
+        <button class="mi-boton-3" id="copiar" onclick="copiar()">
+          copiar
+        </button>
+      </div>
+    </main>
+    <script>
+      const mitexto = document.getElementById('message');
+    
+      mitexto.addEventListener('input', function(event) {
+        event.target.value = event.target.value.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "");
+      });
+    </script>
+    <script>
+      function textoVacio() {
+        var textoCdr = document.getElementById("textoCuadro");
+        var imagen = document.getElementById("imagenM");
+        var textarea = document.getElementById("message");
+        var textarea2 = document.getElementById("resultado");
+        if (textarea.value.trim() === "" && textarea2.value.trim() === "" ) {
+          imagen.style.display = "block";
+
+          textoCdr.style.display = "block";
+        } else {
+          imagen.style.display = "none";
+
+          textoCdr.style.display = "none";
+        }
+      }
+
+      var textarea = document.getElementById("message");
+      var textarea2 = document.getElementById("resultado");
+      textarea2.addEventListener("input", textoVacio);
+      textarea.addEventListener("input", textoVacio);
+    </script>
+    <script>
+      function iniciarTextolleno() {
+        function textolleno() {
+          var copiar = document.getElementById("copiar");
+          var textarea = document.getElementById("resultado");
+
+          if (textarea.value.trim() === "") {
+            
+            copiar.style.display = "none";
+          } else {
+            
+            copiar.style.display = "block";
+          }
+
+          requestAnimationFrame(textolleno);
+        }
+
+        requestAnimationFrame(textolleno);
+      }
+
+      iniciarTextolleno();
+    </script>
+  </body>
+</html>

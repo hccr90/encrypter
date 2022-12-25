@@ -1,0 +1,131 @@
+body {
+  background: #f3f5fc;
+  font-family: "Bebas Neue", sans-serif;
+  font-style: regular;
+}
+[placeholder]::placeholder {
+  color: rgba(10, 56, 113, 1);
+  font-size: 18px;
+  font-family: "Bebas Neue", sans-serif;
+  font-style: regular;
+  font-size: 32px;
+}
+.logo {
+  scale: 80%;
+  margin-top: 10px;
+}
+
+.mitad {
+  width: 65%;
+  float: left;
+}
+.advertencia{
+  position: absolute;
+  top: 510px;
+  left: 140px;
+}
+.advertencia h1{
+  opacity: 0.5;
+
+  font-size: smaller;
+}
+
+.dosBotones {
+  margin: 25% 0% 0% 20%;
+
+}
+.mi-boton-1{
+  color: white;
+  background-color: #0a3871;
+  border-color: #0a3871;
+
+
+
+}
+.mi-boton-2{
+  color: #0a3871;
+  background-color: white;
+  border-color: #0a3871;
+
+}
+
+
+button {
+  height: 45px;
+  width: 200px;
+  border-radius: 15px;
+
+  
+
+}
+button:hover {
+  height: 50px;
+  width: 205px;
+}
+button:active {
+  background-color: aqua;
+}
+.rectangulo2 {
+  resize: none;
+  text-align: left;
+  width: 500px;
+  height: 250px;
+  background-color: #f3f5fc;
+  font-size: 20px;
+  border: 2px solid rgba(0, 0, 0, 0);
+  margin: 5% 15% 2% 15%;
+}
+
+.mitad2 {
+  position: relative;
+
+  width: 35%;
+  float: left;
+}
+
+.rectangulo {
+  resize: none;
+  position: absolute;
+  z-index: 0;
+  text-align: center;
+  width: 250px;
+  height: 500px;
+  background-color: white;
+  border-radius: 20px;
+  border: 2px solid white;
+  margin: 5% 15% 2% 15%;
+  box-shadow: -3px 5px 8px rgba(0, 0, 0, 0.4);
+}
+.imagen1 {
+  background-color: white;
+  position: absolute;
+  z-index: 1;
+  width: 200px;
+  height: 200px;
+  margin: 30% 5% 5% 25%;
+}
+.textoCdr {
+  display: inline;
+  position: absolute;
+  z-index: 2;
+  text-align: center;
+  top: 320px;
+  padding: 0px 50px;
+}
+.textoCdr h1{
+  font-weight: bold;
+  font-size: 20px;
+}  
+.textoCdr h2{
+  opacity: 0.7;
+  font-size: 12px;
+}  
+
+.mi-boton-3 {
+  position: absolute;
+  z-index: 3;
+  margin: 125% 5% 5% 25%;
+  color: #0a3871;
+  background-color: white;
+  border-color: #0a3871;
+}
